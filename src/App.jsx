@@ -28,9 +28,12 @@ class App extends Component {
   handleOnChange = text => {
     this.setState({ text });
   }
+
   handleOnSubmit = e => {
     e.preventDefault();
+    alert('Submit成功');
   }
+  
   render() {
     return (
       <AppContainer>
