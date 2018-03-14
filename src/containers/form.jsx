@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 const Form = ({ handleOnChange, handleOnSubmit }) => {
   return(
-    <form onSubmit={(e) => handleOnSubmit(e)}>
+    <form onSubmit={ e => handleOnSubmit(e)}>
       <fieldset>
         <input
           type="text"
-          onChange={(e) => handleOnChange(e.target.value)}
+          onChange={ e => handleOnChange(e.target.value)}
         />
         <input type="submit"/>
       </fieldset>
