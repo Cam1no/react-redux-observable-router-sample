@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Provider, connect } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import App from './containers/App.jsx';
 import reducer from './reducers';
+import { createEpicMiddleware } from 'redux-observable';
+import { rootEpic } from './epics';
 
-const store = createStore(reducer);
+const epicMiddleware = createEpicMiddleware(rootEpic);
+
+const store = createStore(reducer, applyMiddleware(epicMiddleware));
 
 const RootContainer = styled.div`
   height: 1200px;

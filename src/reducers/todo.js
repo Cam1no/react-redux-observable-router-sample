@@ -10,6 +10,11 @@ const todo = (state = initialState, action) => {
         id: action.id,
         text: action.text
       });
+    case 'ADD_JAVEN':
+      return Object.assign({}, state, {
+        id: action.id,
+        text: action.text
+      })
     default:
       return state
   }

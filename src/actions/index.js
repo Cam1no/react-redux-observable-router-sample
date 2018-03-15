@@ -6,3 +6,11 @@ export const addTodo = text => {
     text
   }
 }
+
+export const addJaven = text => {
+  return {
+    type: 'ADD_JAVEN',
+    id: nextTodoId++,
+    text
+  }
+}
