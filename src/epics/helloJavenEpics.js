@@ -1,4 +1,4 @@
-import Rx from 'rxjs/Rx';
+import 'rxjs/Rx';
 
 export const helloJavenEpics = action$ =>
   action$.ofType('ADD_TODO')
