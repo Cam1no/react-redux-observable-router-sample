@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import App from './containers/App.jsx';
+import Routing from './containers/Routing.jsx';
 import reducer from './reducers';
 import { createEpicMiddleware } from 'redux-observable';
 import { rootEpic } from './epics';
@@ -23,7 +23,7 @@ class Root extends Component {
     return (
       <Provider store={store}>
         <RootContainer>
-          <App />
+          <Routing />
         </RootContainer>
       </Provider>
     );

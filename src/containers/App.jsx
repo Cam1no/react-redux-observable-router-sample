@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Form from './Form.jsx'
 import Result from './Result.jsx';
-import { addTodo } from '../actions'
+import { addTodo } from '../actions';
 
 const FormContainer = styled.div`
   width: 500px;
@@ -18,7 +18,6 @@ class App extends Component {
 
   handleOnSubmit = e => {
     e.preventDefault();
-    alert('Submit成功');
   }
 
   render() {
