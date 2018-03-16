@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Form from './Form.jsx'
 import Result from './Result.jsx';
 import { addTodo } from '../actions';
+import { Link } from 'react-router-dom';
 
 const FormContainer = styled.div`
   width: 500px;
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <FormContainer>
+        <Link to='/about'>Aboutページ</Link>
         <Form handleOnChange={this.handleOnChange} handleOnSubmit={this.handleOnSubmit}/>
         <Result text={this.props.text} />
       </FormContainer>
