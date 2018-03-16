@@ -1,7 +1,7 @@
 import { combineEpics } from 'redux-observable';
-import { helloJavenEpics } from './helloJavenEpics'
+import { wordCounterEpics } from './wordCounterEpics'
 
 
 export const rootEpic = combineEpics(
-  helloJavenEpics,
+  wordCounterEpics,
 );

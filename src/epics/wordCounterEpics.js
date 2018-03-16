@@ -1,6 +1,6 @@
 import 'rxjs/Rx';
 
-export const helloJavenEpics = action$ =>
+export const wordCounterEpics = action$ =>
   action$.ofType('ADD_TODO')
     .map((action) => {
       const { text } = action;
